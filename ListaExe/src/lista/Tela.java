@@ -7,6 +7,7 @@ public class Tela {
 				+ "1. Maior idade \n"
 				+ "2. Desconto do mercado \n"
 				+ "3. JokenPo \n"
+				+ "8. Ate digitar 10 \n"
 				+ "0. Fechar programa");
 	}
 	

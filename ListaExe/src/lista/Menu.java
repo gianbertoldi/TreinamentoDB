@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class Menu {
 
+	private static Scanner key;
+
 	public static void main(String[] args) {
 		char cont;
-		Scanner key = new Scanner(System.in);
+		key = new Scanner(System.in);
 		Tela  tela =  new Tela();
 		tela.inicio();
 		int menu= key.nextInt();
@@ -28,6 +30,7 @@ public class Menu {
 					menu = 0;
 				}
 				break;
+				
 			case 3:
 				DescontoDoMercado desc =  new DescontoDoMercado();
 				desc.perguntaNome();
@@ -47,11 +50,33 @@ public class Menu {
 					menu = 0;
 				}
 				break;
+				
 			case 2:
 				JokenPo jk =  new JokenPo();
 				tela.iniJokenPo();
 				jk.jogador = key.nextInt();
 				jk.getWin();
+				
+				tela.continuar();
+				cont = key.next().charAt(0);
+				if (cont == 's') {
+					tela.inicio();
+					menu = key.nextInt();
+				}else if (cont == 'n'){
+					menu = 0;
+				}
+				break;
+				
+			case 8:
+				//tão simples que nem fiz uma classe kk
+				int ate;
+				System.out.println("Digite o valor");
+				ate = key.nextInt();
+				while(ate != 10) {
+					System.out.println("Digite o proximo valor \n"
+							+ "10 para finalizar");
+					ate = key.nextInt();
+				}
 				
 				tela.continuar();
 				cont = key.next().charAt(0);
