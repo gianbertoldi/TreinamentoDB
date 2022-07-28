@@ -7,11 +7,12 @@ public class MetadeDoAnterior {
 	protected int tamEnt;
 	protected double valor;
 	protected boolean ver;
+	
 	public static void main(String[] args) {
 		DecimalFormat dec =  new DecimalFormat("0.0000");
 		//Scanner key = new Scanner(System.in);
 		System.out.println("Qual o tamanho do vetor?");
-		int v[] = new int[keyEnt()];
+
 		
 	}
 	
@@ -23,7 +24,13 @@ public class MetadeDoAnterior {
         Scanner keyValor = new Scanner(System.in);
         return keyValor.nextInt();
     }
-
+	static int[] LeiaVetor(int tam) {
+        int[] vetor = new int[keyEnt()];
+        for(int i=0; i < keyEnt(); i++){
+            vetor[i] = keyEnt();
+        }
+        return vetor;
+    }
 	public int getTamEnt() {
 		tamEnt = keyEnt();
 		return tamEnt;
@@ -41,21 +48,18 @@ public class MetadeDoAnterior {
 		this.valor= valor;
 	}
 
-	public boolean isVer() {
+	public void ver() {
 		if (getTamEnt() > 0) {
 			System.out.println("Qual o valor");
 			this.getValor();
-			
+			if (getValor() > 0) {
+				System.out.println();
+			} else {
+				System.out.println("-");
+			}
 		}else {
 			 System.out.println("-");
 		}
-		return ver;
-	}
 
-	public void setVer(boolean ver) {
-		this.ver = ver;
-	}
-	
-	
-	
+	}	
 }
