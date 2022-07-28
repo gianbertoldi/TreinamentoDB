@@ -36,8 +36,23 @@ public class Menu {
 				desc.quantidade = key.nextInt();
 				desc.perguntaPreco();
 				desc.preco = key.nextDouble();
-				
 				desc.tela();
+				
+				tela.continuar();
+				cont = key.next().charAt(0);
+				if (cont == 's') {
+					tela.inicio();
+					menu = key.nextInt();
+				}else if (cont == 'n'){
+					menu = 0;
+				}
+				break;
+			case 3:
+				JokenPo jk =  new JokenPo();
+				tela.iniJokenPo();
+				jk.jogador = key.nextInt();
+				jk.getWin();
+				
 				tela.continuar();
 				cont = key.next().charAt(0);
 				if (cont == 's') {
