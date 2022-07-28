@@ -3,11 +3,10 @@ package lista;
 import java.util.Random;
 
 public class JokenPo {
-private String win;
 public int jogador;
 private int ia;
 
-public String getWin() {
+public void getWin() {
 	while (jogador != 0) {
 		switch(jogador) {
 		case 1:
@@ -16,17 +15,14 @@ public String getWin() {
 			case 0:
 				System.out.println("O computador Jogo Pedra");
 				System.out.println("Deu empate");
-				jogador = 0;
 				break;
 			case 1:
 				System.out.println("O computador Jogo papel");
 				System.out.println("O computador Ganhou");
-				jogador = 0;
 				break;
 			case 2:
 				System.out.println("O computador Jogo Tesoura");
 				System.out.println("Voce Ganhou");
-				jogador = 0;
 				break;
 			}
 			break;
@@ -36,17 +32,14 @@ public String getWin() {
 			case 0:
 				System.out.println("O computador Jogo Pedra");
 				System.out.println("Voce Ganhou");
-				jogador = 0;
 				break;
 			case 1:
 				System.out.println("O computador Jogo papel");
 				System.out.println("Deu empate");
-				jogador = 0;
 				break;
 			case 2:
 				System.out.println("O computador Jogo Tesoura");
 				System.out.println("O computador Ganhou");
-				jogador = 0;
 				break;
 			}
 		case 3:
@@ -55,26 +48,21 @@ public String getWin() {
 			case 0:
 				System.out.println("O computador Jogo Pedra");
 				System.out.println("O computador Ganhou ");
-				jogador = 0;
 				break;
 			case 1:
 				System.out.println("O computador Jogo papel");
 				System.out.println("Voce Ganhou");
-				jogador = 0;
 				break;
 			case 2:
 				System.out.println("O computador Jogo Tesoura");
 				System.out.println("Deu empate");
-				jogador = 0;
 				break;
 			}
+			jogador = 0;
 		}
 	}
-	return win;
 }
-public void setWin(String win) {
-	this.win = win;
-}
+
 public int getJogador() {
 	return jogador;
 }

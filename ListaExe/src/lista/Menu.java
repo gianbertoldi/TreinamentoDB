@@ -9,12 +9,13 @@ public class Menu {
 	public static void main(String[] args) {
 		char cont;
 		key = new Scanner(System.in);
+		
 		Tela  tela =  new Tela();
 		tela.inicio();
-		int menu= key.nextInt();
+		tela.menu = key.nextInt();
 		
-		while(menu != 0) {
-			switch(menu) {
+		while(tela.getMenu() != 0) {
+			switch(tela.getMenu()) {
 			case 1:
 				MaiorIdade idi =  new MaiorIdade();
 				idi.pergunta();
@@ -25,13 +26,13 @@ public class Menu {
 				cont = key.next().charAt(0);
 				if (cont == 's') {
 					tela.inicio();
-					menu = key.nextInt();
+					tela.menu = key.nextInt();
 				}else if (cont == 'n'){
-					menu = 0;
+					tela.menu = key.nextInt();
 				}
 				break;
 				
-			case 3:
+			case 2:
 				DescontoDoMercado desc =  new DescontoDoMercado();
 				desc.perguntaNome();
 				desc.nome = key.next();
@@ -45,13 +46,13 @@ public class Menu {
 				cont = key.next().charAt(0);
 				if (cont == 's') {
 					tela.inicio();
-					menu = key.nextInt();
+					tela.menu = key.nextInt();
 				}else if (cont == 'n'){
-					menu = 0;
+					tela.menu = key.nextInt();
 				}
 				break;
 				
-			case 2:
+			case 3:
 				JokenPo jk =  new JokenPo();
 				tela.iniJokenPo();
 				jk.jogador = key.nextInt();
@@ -61,9 +62,9 @@ public class Menu {
 				cont = key.next().charAt(0);
 				if (cont == 's') {
 					tela.inicio();
-					menu = key.nextInt();
+					tela.menu = key.nextInt();
 				}else if (cont == 'n'){
-					menu = 0;
+					tela.menu = key.nextInt();
 				}
 				break;
 				
@@ -82,9 +83,9 @@ public class Menu {
 				cont = key.next().charAt(0);
 				if (cont == 's') {
 					tela.inicio();
-					menu = key.nextInt();
+					tela.menu = key.nextInt();
 				}else if (cont == 'n'){
-					menu = 0;
+					tela.menu = key.nextInt();
 				}
 				break;
 			}

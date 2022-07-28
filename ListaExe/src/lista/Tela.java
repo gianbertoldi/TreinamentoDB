@@ -1,6 +1,15 @@
 package lista;
 
 public class Tela {
+	public int menu;
+
+	public int getMenu() {
+		return menu;
+	}
+
+	public void setMenu(int menu) {
+		this.menu = menu;
+	}
 
 	public void inicio() {
 		System.out.println("Escolha o exercio que deseja abrir: \n"
