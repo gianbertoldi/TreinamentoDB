@@ -1,28 +1,31 @@
 package lista;
 
 public class MaiorIdade {
-	private int idade;
-	private String res;
-
-	public maiorIdade(String res, int idade) {
-		setIdade(idade);
+	public int idade;
+	protected boolean maior;
+	
+	
+	public void tela() {
+		if (this.maior == true) {
+			System.out.println("Checamos que é maior de idade");
+		} else {
+			System.out.println("Checamos que é menor de idade");
+		}
 	}
-	public static int getIdade(int idade) {
-		return idade;
+	public int getIdade() {
+		return this.idade;
 	}
-	public void setIdade(int idade, String res) {
-		if(idade <= 18) {
-			this.idade = idade;	
-			this.res = "É maior de idade.";
+	public void setIdade(int idade) {
+		if (idade >= 18) {
+			this.maior =  true;
 		}
 		else {
-			this.res = "É menos de idade.";
+			this.maior = false;
 		}
-		
 	}
-	static String Iniciando() {
-		String 	res = "Qual a idade que deseja consultar?";
-		return res;	
+	public void pergunta() {
+		System.out.println("Qual a idade que deseja verificar");
 	}
-
+	protected void maior(){
+	}
 }
