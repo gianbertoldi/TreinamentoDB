@@ -10,50 +10,64 @@ private int ia;
 public String getWin() {
 	while (jogador != 0) {
 		switch(jogador) {
-		case 0:
-			System.out.println("Voce desitiu de jogar");
-			break;
 		case 1:
-			switch(ia) {
+			System.out.print("Voce Jogou Pedra e ");
+			switch(getIa()) {
 			case 0:
+				System.out.println("O computador Jogo Pedra");
 				System.out.println("Deu empate");
+				jogador = 0;
 				break;
 			case 1:
+				System.out.println("O computador Jogo papel");
 				System.out.println("O computador Ganhou");
+				jogador = 0;
 				break;
 			case 2:
-				System.out.println("O voce Ganhou");
+				System.out.println("O computador Jogo Tesoura");
+				System.out.println("Voce Ganhou");
+				jogador = 0;
 				break;
 			}
 			break;
 		case 2:
-			switch(ia) {
+			System.out.print("Voce Jogou Papel e ");
+			switch(getIa()) {
 			case 0:
-				System.out.println("O voce Ganhou");
+				System.out.println("O computador Jogo Pedra");
+				System.out.println("Voce Ganhou");
+				jogador = 0;
 				break;
 			case 1:
+				System.out.println("O computador Jogo papel");
 				System.out.println("Deu empate");
+				jogador = 0;
 				break;
 			case 2:
+				System.out.println("O computador Jogo Tesoura");
 				System.out.println("O computador Ganhou");
+				jogador = 0;
 				break;
 			}
 		case 3:
-			switch(ia) {
+			System.out.print("Voce Jogou tesoura e ");
+			switch(getIa()) {
 			case 0:
-				System.out.println("O computador Ganhou");
+				System.out.println("O computador Jogo Pedra");
+				System.out.println("O computador Ganhou ");
+				jogador = 0;
 				break;
 			case 1:
-				System.out.println("O voce Ganhou");
-
+				System.out.println("O computador Jogo papel");
+				System.out.println("Voce Ganhou");
+				jogador = 0;
 				break;
 			case 2:
+				System.out.println("O computador Jogo Tesoura");
 				System.out.println("Deu empate");
+				jogador = 0;
 				break;
 			}
-		default:
-			System.out.println("Escolah um numero valido de 1 a 3");
-			break;
 		}
 	}
 	return win;

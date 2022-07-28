@@ -28,7 +28,7 @@ public class Menu {
 					menu = 0;
 				}
 				break;
-			case 2:
+			case 3:
 				DescontoDoMercado desc =  new DescontoDoMercado();
 				desc.perguntaNome();
 				desc.nome = key.next();
@@ -47,7 +47,7 @@ public class Menu {
 					menu = 0;
 				}
 				break;
-			case 3:
+			case 2:
 				JokenPo jk =  new JokenPo();
 				tela.iniJokenPo();
 				jk.jogador = key.nextInt();
