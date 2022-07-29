@@ -58,8 +58,12 @@ public void getWin() {
 				System.out.println("Deu empate");
 				break;
 			}
-			jogador = 0;
 			break;
+		case 0: 
+			System.out.println("Voce desistiu de jogar");
+			break;
+		default:
+			System.out.println("Comando Invalido!!");
 		}
 	}
 }

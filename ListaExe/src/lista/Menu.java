@@ -13,7 +13,6 @@ public class Menu{
 		Tela  tela =  new Tela();
 		tela.inicio();
 		tela.menu = key.nextInt();
-		tela.ClearConsole();
 		
 		while(tela.getMenu() != 0) {
 			switch(tela.getMenu()) {

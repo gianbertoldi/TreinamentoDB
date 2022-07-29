@@ -3,27 +3,7 @@ package lista;
 public class Tela {
 	public int menu;
 
-
-	public void ClearConsole(){
-        try{
-            String operatingSystem = System.getProperty("os.name"); //Check the current operating system
-              
-            if(operatingSystem.contains("Windows")){        
-                ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "cls");
-                Process startProcess = pb.inheritIO().start();
-                startProcess.waitFor();
-            } else {
-                ProcessBuilder pb = new ProcessBuilder("clear");
-                Process startProcess = pb.inheritIO().start();
-
-                startProcess.waitFor();
-            } 
-        }catch(Exception e){
-            System.out.println(e);
-        }
-    }
- 
- public int getMenu() {
+	public int getMenu() {
 		return menu;
 	}
 
@@ -51,12 +31,12 @@ public class Tela {
 				+ "1. pedra \n"
 				+ "2. papel \n"
 				+ "3. tesoura \n"
-				+ "0 . desistir");
+				+ "0. desistir");
 	}
 	
 	public void opera() {
 		System.out.println("Vamos calcular: \n"
-				+ "Selecione o tipo de oprção que deseja fazer \n"
+				+ "Selecione o tipo de operação que deseja fazer \n"
 				+ "+ para adição \n"
 				+ "- para subtração \n"
 				+ "* multiplicação \n"
@@ -66,11 +46,11 @@ public class Tela {
 				+ "f para cancelar");
 	}
 	
-public void incCal() {
+	public void incCal() {
 		System.out.print("Qual o primeiro valor: " );
 	}
 	
-public void segCal() {
+	public void segCal() {
 		System.out.print("Qual o segundo valor: " );
 	}
 	
