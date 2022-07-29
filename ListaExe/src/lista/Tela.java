@@ -3,7 +3,27 @@ package lista;
 public class Tela {
 	public int menu;
 
-	public int getMenu() {
+
+	public void ClearConsole(){
+        try{
+            String operatingSystem = System.getProperty("os.name"); //Check the current operating system
+              
+            if(operatingSystem.contains("Windows")){        
+                ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "cls");
+                Process startProcess = pb.inheritIO().start();
+                startProcess.waitFor();
+            } else {
+                ProcessBuilder pb = new ProcessBuilder("clear");
+                Process startProcess = pb.inheritIO().start();
+
+                startProcess.waitFor();
+            } 
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }
+ 
+ public int getMenu() {
 		return menu;
 	}
 
@@ -16,6 +36,8 @@ public class Tela {
 				+ "1. Maior idade \n"
 				+ "2. Desconto do mercado \n"
 				+ "3. JokenPo \n"
+				+ "4. Calculadora \n"
+				+ "5. Tabuada \n"
 				+ "8. Ate digitar 10 \n"
 				+ "0. Fechar programa");
 	}
@@ -28,8 +50,28 @@ public class Tela {
 		System.out.println("Vamos jogar JokenPo!! \n"
 				+ "1. pedra \n"
 				+ "2. papel \n"
-				+ "3. pedra \n"
+				+ "3. tesoura \n"
 				+ "0 . desistir");
+	}
+	
+	public void opera() {
+		System.out.println("Vamos calcular: \n"
+				+ "Selecione o tipo de oprção que deseja fazer \n"
+				+ "+ para adição \n"
+				+ "- para subtração \n"
+				+ "* multiplicação \n"
+				+ "/ para divisão \n"
+				+ "p para potencia \n"
+				+ "r para fazer uma raiz quadrada \n"
+				+ "f para cancelar");
+	}
+	
+public void incCal() {
+		System.out.print("Qual o primeiro valor: " );
+	}
+	
+public void segCal() {
+		System.out.print("Qual o segundo valor: " );
 	}
 	
 }

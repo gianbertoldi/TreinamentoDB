@@ -2,7 +2,7 @@ package lista;
 
 import java.util.Scanner;
 
-public class Menu {
+public class Menu{
 
 	private static Scanner key;
 
@@ -13,6 +13,7 @@ public class Menu {
 		Tela  tela =  new Tela();
 		tela.inicio();
 		tela.menu = key.nextInt();
+		tela.ClearConsole();
 		
 		while(tela.getMenu() != 0) {
 			switch(tela.getMenu()) {
@@ -28,7 +29,7 @@ public class Menu {
 					tela.inicio();
 					tela.menu = key.nextInt();
 				}else if (cont == 'n'){
-					tela.menu = key.nextInt();
+					tela.menu = 0;
 				}
 				break;
 				
@@ -48,7 +49,7 @@ public class Menu {
 					tela.inicio();
 					tela.menu = key.nextInt();
 				}else if (cont == 'n'){
-					tela.menu = key.nextInt();
+					tela.menu = 0;
 				}
 				break;
 				
@@ -64,10 +65,28 @@ public class Menu {
 					tela.inicio();
 					tela.menu = key.nextInt();
 				}else if (cont == 'n'){
-					tela.menu = key.nextInt();
+					tela.menu = 0;
 				}
 				break;
+			case 4:
+				Calculadora calc =  new Calculadora();
+				tela.opera();
+				calc.oper = key.next().charAt(0);
+				tela.incCal();
+				calc.priVal = key.nextDouble();
+				tela.segCal();
+				calc.segVal = key.nextDouble();
+				calc.getTela();
 				
+				tela.continuar();
+				cont = key.next().charAt(0);
+				if (cont == 's') {
+					tela.inicio();
+					tela.menu = key.nextInt();
+				}else if (cont == 'n'){
+					tela.menu = 0;
+				}
+				break;
 			case 8:
 				//tão simples que nem fiz uma classe kk
 				int ate;
@@ -85,7 +104,7 @@ public class Menu {
 					tela.inicio();
 					tela.menu = key.nextInt();
 				}else if (cont == 'n'){
-					tela.menu = key.nextInt();
+					tela.menu = 0;
 				}
 				break;
 			}
