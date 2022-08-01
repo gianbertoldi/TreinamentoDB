@@ -1,8 +1,9 @@
 package lista;
 
 public class Tela {
+	
 	public int menu;
-
+	
 	public int getMenu() {
 		return menu;
 	}
@@ -10,7 +11,6 @@ public class Tela {
 	public void setMenu(int menu) {
 		this.menu = menu;
 	}
-
 	public void inicio() {
 		System.out.println("Escolha o exercio que deseja abrir: \n"
 				+ "1. Maior idade \n"
@@ -18,8 +18,14 @@ public class Tela {
 				+ "3. JokenPo \n"
 				+ "4. Calculadora \n"
 				+ "5. Tabuada \n"
+				+ "6. 10 numeros aleatrios e motrar o menor e maior \n"
 				+ "8. Ate digitar 10 \n"
 				+ "0. Fechar programa");
+	}
+	
+	public void tabuada() {
+		System.out.println("Este algoritimo é para ver a tabuada \n"
+				+ "Digite o qual tabuada deseja verificar: ");
 	}
 	
 	public void continuar() {

@@ -7,7 +7,7 @@ public class DescontoDoMercado {
 	public String nome;
 	public int quantidade;
 	public double preco;
-	protected int desconto;
+	private int desconto;
 	protected double total, totalDesco;
 	
 	public void perguntaNome() {

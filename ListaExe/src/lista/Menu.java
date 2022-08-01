@@ -86,6 +86,37 @@ public class Menu{
 					tela.menu = 0;
 				}
 				break;
+			case 5:
+				Tabuada tab = new Tabuada();
+				tela.tabuada();
+				tab.val = key.nextInt();
+				tab.tela();
+				
+				tela.continuar();
+				cont = key.next().charAt(0);
+				if (cont == 's') {
+					tela.inicio();
+					tela.menu = key.nextInt();
+				}else if (cont == 'n'){
+					tela.menu = 0;
+				}
+				break;
+			case 6:
+				NumeroAleatorio na = new NumeroAleatorio();
+				na.ale();
+				
+				tela.continuar();
+				cont = key.next().charAt(0);
+				if (cont == 's') {
+					tela.inicio();
+					tela.menu = key.nextInt();
+				}else if (cont == 'n'){
+					tela.menu = 0;
+				}
+				break;
+			case 7:
+				
+				break;
 			case 8:
 				//tão simples que nem fiz uma classe kk
 				int ate;
@@ -95,6 +126,8 @@ public class Menu{
 					System.out.println("Digite o proximo valor \n"
 							+ "10 para finalizar");
 					ate = key.nextInt();
+					
+					
 				}
 				
 				tela.continuar();

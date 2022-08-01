@@ -26,6 +26,5 @@ public class MaiorIdade {
 	public void pergunta() {
 		System.out.println("Qual a idade que deseja verificar");
 	}
-	protected void maior(){
-	}
+
 }
