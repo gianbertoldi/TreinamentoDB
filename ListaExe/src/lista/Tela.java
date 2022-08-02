@@ -20,6 +20,7 @@ public class Tela {
 				+ "5. Tabuada \n"
 				+ "6. 10 numeros aleatrios e motrar o menor e maior \n"
 				+ "8. Ate digitar 10 \n"
+				+ "9. para serie Fibonacci \n"
 				+ "0. Fechar programa");
 	}
 	
@@ -60,4 +61,10 @@ public class Tela {
 		System.out.print("Qual o segundo valor: " );
 	}
 	
+	public void fib() {
+		System.out.println("Iniciando serie Fibonacci");
+	}
+	public void matrizQua() {
+		
+	}
 }

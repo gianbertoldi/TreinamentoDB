@@ -139,6 +139,24 @@ public class Menu{
 					tela.menu = 0;
 				}
 				break;
+			case 9:
+				SerieFibonacci fib = new SerieFibonacci();
+				tela.fib();
+				
+				fib.serie();
+				
+				tela.continuar();
+				cont = key.next().charAt(0);
+				if (cont == 's') {
+					tela.inicio();
+					tela.menu = key.nextInt();
+				}else if (cont == 'n'){
+					tela.menu = 0;
+				}
+				break;
+			case 10:
+				
+				break;
 			}
 		}
 		System.out.println("Fim do programa");
