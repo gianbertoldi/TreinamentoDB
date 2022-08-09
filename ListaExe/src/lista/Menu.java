@@ -157,6 +157,19 @@ public class Menu{
 			case 10:
 				
 				break;
+			case 20:
+				Pessoa p = new Pessoa("Um nome ", "Um sobrenome", 21);
+				p.print();
+				
+				tela.continuar();
+				cont = key.next().charAt(0);
+				if (cont == 's') {
+					tela.inicio();
+					tela.menu = key.nextInt();
+				}else if (cont == 'n'){
+					tela.menu = 0;
+				}
+				break;
 			}
 		}
 		System.out.println("Fim do programa");

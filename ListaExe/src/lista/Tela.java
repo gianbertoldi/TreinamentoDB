@@ -21,6 +21,7 @@ public class Tela {
 				+ "6. 10 numeros aleatrios e motrar o menor e maior \n"
 				+ "8. Ate digitar 10 \n"
 				+ "9. para serie Fibonacci \n"
+				+ "20 Pessoa \n" 
 				+ "0. Fechar programa");
 	}
 	
@@ -65,6 +66,7 @@ public class Tela {
 		System.out.println("Iniciando serie Fibonacci");
 	}
 	public void matrizQua() {
-		
+		System.out.println("Iniciando matriz quadrada \n "
+				+ "somando a diagonal da matriz ");
 	}
 }
