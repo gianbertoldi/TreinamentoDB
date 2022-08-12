@@ -14,7 +14,7 @@ public class EmpresaDeOnibus {
 		
 	}
 	public static void rota(Scanner key) {
-		System.out.println("Qual a rota?");
+		
 		EmpresaDeOnibus.getRotas();
 		
 	}
@@ -22,18 +22,27 @@ public class EmpresaDeOnibus {
 		Scanner key =  new Scanner(System.in);
 		int cont = 0;
 		List<Integer> rota =  new ArrayList<>();
-		List<Integer> passagero = new  ArrayList<>();
-		rotas =  key.nextInt();
+
+		int pass[] =  new int[20];
+		int i = 0;
+		rotas =  2;
+		
 		while(rotas != 0) {
-			if(!rota.contains(rotas)){
+			System.out.println("Qual a rota?");
+			rotas =  key.nextInt();
+			if((!rota.contains(rotas)  && (rotas != 0))){
 				rota.add(rotas);
+				pass[i] = getPassageiros(key);
+				i++;
 				System.out.println("rota inclusa com sucesso");
-				
-				rotas =  key.nextInt();
-			}else {
-				System.out.println("Ja inclusa a rota");
-				rotas =  key.nextInt();
+			}else if ((rota.contains(rotas)  && (rotas != 0))){
+				System.out.println("rota ja inclusa");
+				pass[i] += getPassageiros(key);
 			}
+		}
+
+		for (i = 0; i < rota.size(); i++) {
+			System.out.println(rota.get(i) + " passagero nela " + pass[i]);
 		}
 		return rotas;
 	}
@@ -41,9 +50,9 @@ public class EmpresaDeOnibus {
 		EmpresaDeOnibus.rotas = rotas;
 	}
 	
-	public static int getPassageiros() {
-		
-		
+	public static int getPassageiros(Scanner key) {
+		System.out.println("quantos passageiros foram nesta viagem?");
+		passageiros =key.nextInt();
 		return passageiros;
 	}
 	public static void setPassageiros(int passageiros) {
