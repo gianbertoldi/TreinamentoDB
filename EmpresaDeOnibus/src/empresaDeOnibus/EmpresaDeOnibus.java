@@ -10,10 +10,10 @@ public class EmpresaDeOnibus {
 	public static int passageiros;
 	
 	public static void main(String[] args) {
-		EmpresaDeOnibus.rota(null);
+		EmpresaDeOnibus.rota();
 		
 	}
-	public static void rota(Scanner key) {
+	public static void rota() {
 		
 		EmpresaDeOnibus.getRotas();
 		
