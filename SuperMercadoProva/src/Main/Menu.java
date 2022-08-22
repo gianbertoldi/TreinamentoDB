@@ -16,7 +16,6 @@ public class Menu {
         System.out.println("1 - MOSTRAR CATALOGO");
         System.out.println("2 - ADICIONAR ITEM AO CARRINHO");
         System.out.println("3 - VER PEDIDO");
-        System.out.println("4 - FAZER PAGAMENTO");
 
         System.out.println("0 - ENCERRAR");
     }
@@ -34,11 +33,13 @@ public class Menu {
             case 3:
                 Pedido.imprimePedido();
                 return true;
-            case 4:
-            	Pagamento.imprimeFimDoPedido();
-            	return false;
             case 0:
-                return false;
+            	if(Pedido.valorTotalDoPedido == 0) {
+            		return false;
+            	}else {
+            		Pagamento.imprimeFimDoPedido();
+            		return false;
+            	}
             default:
                 System.out.println("Opcao invalida");
                 return true;
