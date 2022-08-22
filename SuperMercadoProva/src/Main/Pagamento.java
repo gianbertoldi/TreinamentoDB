@@ -23,13 +23,15 @@ public class Pagamento {
 
 
 	public static double getTroco() {
-	pagamento = valorPagar();
+		pagamento = valorPagar();
+		double d;
 		while (isPagamento() != true) {
 			System.out.println("Pagamento insuficiente para compra");
 			pagamento = valorPagar();
 		}
-			troco = pagamento - Pedido.valorTotalDoPedido;
+		d = pagamento - Pedido.valorTotalDoPedido;
 		
+		troco = (double) (Math.round(d *100.0)/100.0);
 		return troco;
 	}
 
@@ -68,7 +70,7 @@ public class Pagamento {
 	private static void imprimeTroco() {
     	System.out.println();
     	System.out.printf("Troco: R$%.2f", troco);
-    	System.out.println("________________________________________________________________________");
+    	System.out.println("_________________________________________________________________________");
     	imprimeNotas();
         System.out.println();
         System.out.println();
@@ -76,6 +78,7 @@ public class Pagamento {
 	
 	private static void imprimeNotas() {
 		 notasEntregue();
+		 System.out.print("|| ");
 		for (Map.Entry<Double, Integer> ps : qtd.entrySet()) {
 			double num = ps.getKey();
 			int quant = ps.getValue();
