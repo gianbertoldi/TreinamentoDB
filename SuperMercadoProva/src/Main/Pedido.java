@@ -58,7 +58,9 @@ public class Pedido {
         String nome = recebeNomeDoTeclado();
         int quantidade = recebeQuantidadeDoTeclado();
         Produto produto = Estoque.encontraProduto(nome);
-        if(produto != null){
+        if (quantidade > Estoque.getQuantidadeAtualEmEstoque(produto)) {
+        	System.out.println("Quantidade solicitada em falta no Estoque.");
+        }else if(produto != null){
             adicionaItemNaLista(produto,quantidade);
             calculaValorTotal();
         } else {
