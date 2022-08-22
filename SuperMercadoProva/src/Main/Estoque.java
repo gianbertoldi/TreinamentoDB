@@ -63,6 +63,7 @@ public class Estoque {
     }
 
     public static boolean darBaixaEmEstoque(String nome, int quantidadeParaDarBaixa) {
+
         Produto produto = encontraProduto(nome);
         if (produto != null) {
             if (temEstoqueOuNao(produto, quantidadeParaDarBaixa)) {

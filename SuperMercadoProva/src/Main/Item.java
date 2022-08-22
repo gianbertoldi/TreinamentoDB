@@ -6,6 +6,7 @@ public class Item {
     private Produto produto;
     private int quantidade;
     private double valorDoItem;
+    public double pagamento;
 
     public Item(Produto produto, int quantidade) {
             this.produto = produto;
@@ -40,4 +41,7 @@ public class Item {
     public void setValorDoItem(double valorDoItem) {
         this.valorDoItem = valorDoItem;
     }
+
+	
+    
 }

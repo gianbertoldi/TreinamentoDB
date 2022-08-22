@@ -7,7 +7,8 @@ import java.util.ArrayList;
 public class Pedido {
 
     private static ArrayList<Item> listaDeItens = new ArrayList();
-    private static double valorTotalDoPedido = 0;
+    protected static double valorTotalDoPedido = 0;
+   
 
     public static void calculaValorTotal() {
         double subTotal = 0;
@@ -17,7 +18,7 @@ public class Pedido {
         valorTotalDoPedido = subTotal;
     }
 
-    public static boolean adicionaItemNaLista(Produto produto, int quantidade) {
+	public static boolean adicionaItemNaLista(Produto produto, int quantidade) {
         for (Item item : listaDeItens) {
             if (item.getProduto().getNome().equalsIgnoreCase(produto.getNome())) {
                 Estoque.darBaixaEmEstoque(item.getProduto().getId(), quantidade);
@@ -27,6 +28,7 @@ public class Pedido {
                 return false;
             }
         }
+        
         listaDeItens.add(new Item(produto, quantidade));
         Estoque.darBaixaEmEstoque(produto.getId(), quantidade);
         System.out.println("Foi adicionado o produto na lista de compras.");
@@ -42,6 +44,7 @@ public class Pedido {
         }
         imprimeValorTotal();
     }
+
 
     private static void imprimeValorTotal() {
         System.out.println();
